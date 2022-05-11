@@ -1,5 +1,8 @@
 package com.company;
 
+import com.company.person.Person;
+import com.company.sumcalculator.SimpleCalculator;
+
 import static com.company.allfactors.FactorPrinter.printFactors;
 import static com.company.areacalculator.AreaCalculator.area;
 import static com.company.barkingdog.BarkingDog.shouldWakeUp;
@@ -21,6 +24,7 @@ import static com.company.numberinword.NumberInWord.printNumberInWord;
 import static com.company.numberofdays.NumberOfDaysInMonth.getDaysInMonth;
 import static com.company.numberpalindrome.NumberPalindrome.isPalindrome;
 import static com.company.numbertowords.NumberToWords.numberToWords;
+import static com.company.paintjob.PaintJob.getBucketCount;
 import static com.company.perfectnumber.PerfectNumber.isPerfectNumber;
 import static com.company.shareddigit.SharedDigit.hasSharedDigit;
 import static com.company.speedconverter.SpeedConverter.printConversion;
@@ -56,7 +60,25 @@ public class Main {
 //        System.out.println(getLargestPrime(24));
 //        printSquareStar(5);
 //        inputThenPrintSumAndAverage();
+//        System.out.println(getBucketCount(3.4,2.1,1.5,2));
+//        OOP taskas
+//        SimpleCalculator simpleCalculator = new SimpleCalculator();
+//        simpleCalculator.setFirstNumber(3);
+//        simpleCalculator.setSecondNumber(5);
+//        System.out.println(simpleCalculator.getAdditionResult());
 
+//        Person person = new Person();
+//        person.setFirstName("");   // firstName is set to empty string
+//        person.setLastName("");    // lastName is set to empty string
+//        person.setAge(10);
+//        System.out.println("fullName= " + person.getFullName());
+//        System.out.println("teen= " + person.isTeen());
+//        person.setFirstName("John");    // firstName is set to John
+//        person.setAge(18);
+//        System.out.println("fullName= " + person.getFullName());
+//        System.out.println("teen= " + person.isTeen());
+//        person.setLastName("Smith");    // lastName is set to Smith
+//        System.out.println("fullName= " + person.getFullName());
     }
 
 }
