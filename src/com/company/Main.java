@@ -1,41 +1,11 @@
 package com.company;
 
-import com.company.carpetcostcalculator.Calculator;
-import com.company.carpetcostcalculator.Carpet;
-import com.company.carpetcostcalculator.Floor;
-import com.company.complexoperations.ComplexNumber;
-import com.company.person.Person;
-import com.company.point.Point;
-import com.company.sumcalculator.SimpleCalculator;
-import com.company.wallarea.WallArea;
+import com.company.bedroom.*;
+import com.company.rectanglecuboid.Cuboid;
+import com.company.rectanglecuboid.Rectangle;
 
-import static com.company.allfactors.FactorPrinter.printFactors;
 import static com.company.areacalculator.AreaCalculator.area;
-import static com.company.barkingdog.BarkingDog.shouldWakeUp;
-import static com.company.decimalcomparator.DecimalComparator.areEqualByThreeDecimalPlaces;
-import static com.company.diagonalstar.DiagonalStar.printSquareStar;
-import static com.company.equalityprinter.IntEqualityPrinter.printEqual;
-import static com.company.equalsumchecker.EqualSumChecker.hasEqualSum;
-import static com.company.evendigitsum.EvenDigitSum.getEvenDigitSum;
-import static com.company.firstandlastdigitsum.FirstLastDigitSum.sumFirstAndLastDigit;
-import static com.company.flourpackproblem.FlourPacker.canPack;
-import static com.company.greatestcommondivisor.GreatestCommonDivisor.getGreatestCommonDivisor;
-import static com.company.inputcalculator.InputCalculator.inputThenPrintSumAndAverage;
-import static com.company.largestprime.LargestPrime.getLargestPrime;
-import static com.company.lastdigitcheker.LastDigitChecker.hasSameLastDigit;
-import static com.company.leapyear.LeapYear.isLeapYear;
-import static com.company.megabytesconverter.MegaBytesConverter.printMegaBytesAndKiloBytes;
-import static com.company.minutestoyear.MinutesToYearsDaysCalculator.printYearsAndDays;
-import static com.company.numberinword.NumberInWord.printNumberInWord;
-import static com.company.numberofdays.NumberOfDaysInMonth.getDaysInMonth;
-import static com.company.numberpalindrome.NumberPalindrome.isPalindrome;
-import static com.company.numbertowords.NumberToWords.numberToWords;
 import static com.company.paintjob.PaintJob.getBucketCount;
-import static com.company.perfectnumber.PerfectNumber.isPerfectNumber;
-import static com.company.shareddigit.SharedDigit.hasSharedDigit;
-import static com.company.speedconverter.SpeedConverter.printConversion;
-import static com.company.speedconverter.SpeedConverter.toMilesPerHour;
-import static com.company.teennumberchecker.TeenNumberChecker.hasTeen;
 
 public class Main {
 
@@ -112,17 +82,48 @@ public class Main {
 //        calculator = new Calculator(floor, carpet);
 //        System.out.println("total= " + calculator.getTotalCost());
 
-        ComplexNumber one = new ComplexNumber(1.0, 1.0);
-        ComplexNumber number = new ComplexNumber(2.5, -1.5);
-        one.add(1,1);
-        System.out.println("one.real= " + one.getReal());
-        System.out.println("one.imaginary= " + one.getImaginary());
-        one.subtract(number);
-        System.out.println("one.real= " + one.getReal());
-        System.out.println("one.imaginary= " + one.getImaginary());
-        number.subtract(one);
-        System.out.println("number.real= " + number.getReal());
-        System.out.println("number.imaginary= " + number.getImaginary());
+//        ComplexNumber one = new ComplexNumber(1.0, 1.0);
+//        ComplexNumber number = new ComplexNumber(2.5, -1.5);
+//        one.add(1,1);
+//        System.out.println("one.real= " + one.getReal());
+//        System.out.println("one.imaginary= " + one.getImaginary());
+//        one.subtract(number);
+//        System.out.println("one.real= " + one.getReal());
+//        System.out.println("one.imaginary= " + one.getImaginary());
+//        number.subtract(one);
+//        System.out.println("number.real= " + number.getReal());
+//        System.out.println("number.imaginary= " + number.getImaginary());
+
+//        Circle circle = new Circle(3.75);
+//        System.out.println("circle.radius= " + circle.getRadius());
+//        System.out.println("circle.area= " + circle.getArea());
+//        Cylinder cylinder = new Cylinder(5.55, 7.25);
+//        System.out.println("cylinder.radius= " + cylinder.getRadius());
+//        System.out.println("cylinder.height= " + cylinder.getHeight());
+//        System.out.println("cylinder.area= " + cylinder.getArea());
+//        System.out.println("cylinder.volume= " + cylinder.getVolume());
+
+//        Rectangle rectangle = new Rectangle(5, 10);
+//        System.out.println("rectangle.width= " + rectangle.getWidth());
+//        System.out.println("rectangle.length= " + rectangle.getLength());
+//        System.out.println("rectangle.area= " + rectangle.getArea());
+//        Cuboid cuboid = new Cuboid(5,10,5);
+//        System.out.println("cuboid.width= " + cuboid.getWidth());
+//        System.out.println("cuboid.length= " + cuboid.getLength());
+//        System.out.println("cuboid.area= " + cuboid.getArea());
+//        System.out.println("cuboid.height= " + cuboid.getHeight());
+//        System.out.println("cuboid.volume= " + cuboid.getVolume());
+
+        Wall wall1 = new Wall( "West ");
+        Wall wall2 = new Wall("East") ;
+        Wall wall3 = new Wall ( "South " );
+        Wall wall4 = new Wall("North") ;
+        Ceiling ceiling = new Ceiling (12, 55);
+        Bed bed = new Bed ("Modern", 4, 3, 2, 1);
+        Lamp lamp = new Lamp("Classic", false, 75);
+        Bedroom bedRoom = new Bedroom("YOUR NAME HERE", wall1, wall2, wall3, wall4, ceiling, bed, lamp);
+        bedRoom.makeBed() ;
+        bedRoom.getLamp().turnOn ();
     }
 
 }
