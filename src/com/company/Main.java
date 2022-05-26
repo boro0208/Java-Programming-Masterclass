@@ -1,6 +1,6 @@
 package com.company;
 
-import com.company.sortedarray.SortedArray;
+import static com.company.minimumelement.MinimumElement.*;
 
 public class Main {
 
@@ -163,10 +163,16 @@ public class Main {
 //        System.out.println("Total Deluxe Burger price is " + db.itemizeHamburger());
 
 
-        int[] testArray = SortedArray.getIntegers(5);
-        int[] array = SortedArray.sortIntegers(testArray);
-        SortedArray.printArray(array);
+//        int[] testArray = SortedArray.getIntegers(5);
+//        int[] array = SortedArray.sortIntegers(testArray);
+//        SortedArray.printArray(array);
 
+//        readInteger();
+//        int[] test = readElements(readInteger());
+//        System.out.println(Arrays.toString(test));
+
+        int minNum = findMin(readElements(readInteger()));
+        System.out.println(minNum);
     }
 
 }
