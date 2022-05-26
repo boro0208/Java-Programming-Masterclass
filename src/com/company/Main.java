@@ -1,6 +1,6 @@
 package com.company;
 
-import static com.company.minimumelement.MinimumElement.*;
+import com.company.reversearray.ReverseArray;
 
 public class Main {
 
@@ -171,8 +171,11 @@ public class Main {
 //        int[] test = readElements(readInteger());
 //        System.out.println(Arrays.toString(test));
 
-        int minNum = findMin(readElements(readInteger()));
-        System.out.println(minNum);
+//        int minNum = findMin(readElements(readInteger()));
+//        System.out.println(minNum);
+
+        int[] test = new int[] {1,2,3,4};
+        ReverseArray.reverse(test);
     }
 
 }
